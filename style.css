@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+    height: 100vh; 
+    margin: 0;
+    background-color: lightgrey;
+}
+
+.top-header {
+    grid-area: header;
+    background-color: rgba(128, 128, 128, 0.582);
+    height: 25vh;
+}
+.content {
+    grid-area: content;
+    background-color: lightblue;
+}
+.head-nav {
+    grid-area: nav;
+    background-color: lightcoral;
+}
+.form {
+    grid-area: sidebar;
+    background-color: lightgoldenrodyellow;
+}
+.art {
+    grid-area: art;
+    background-color: lightsalmon;
+}
+.main-footer {
+    grid-area: footer;
+    background-color: lightsteelblue;
+}
+.wrapper {
+    display: grid;
+    gap: 20px;
+    background-color: lightgrey;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "sidebar"
+    "content"
+    "art"
+    "footer";
+}
+.flex-ctr-end{
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+}
+.flex-lft{
+    display: flex;
+    justify-content: left;
+    /* align-items: flex-end; */
+}
+.flex-ctr-clm{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+input {
+    height: 2.5em;
+}
+header {
+    font-size: 3em;
+}
+.insert{
+    padding-right: 1em;
+}
+p {
+    font-weight: bold;
+}
+.added_p {
+    font-weight: normal;
+}
+
+
+/* above is for mobile single column but for our large screen we want to use more of the screen space */
+@media (min-width: 500px) {
+    .wrapper {
+      grid-template-columns: 1fr 3fr;
+      grid-template-areas:
+        "header  header"
+        "nav     nav"
+        "sidebar sidebar"
+        "content content"
+        "art      footer";
+    }
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+}
+
+/* Three column layout for slightly larger tablets. */
+@media (min-width: 700px) {
+    .wrapper {
+    /* fr units will evenly divide horizontal axis */
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-areas:
+        "header header  header"
+        "nav    content sidebar"
+        "nav    content art"
+        "footer footer  footer"
+     }
+     nav ul {
+       flex-direction: column;
+     }
+}
+
+/* 
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+    height: 100vh; 
+    margin: 0;
+    display: grid;
+    grid-template-rows: 3rem auto; 
+    color: white;
+}
+
+.flex-ctr {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header {
+    background: url("https://wallpaperaccess.com/full/2962268.jpg");
+}
+nav a {
+    line-height: 3rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+img {
+
+    border: 3px solid white;
+    border-radius: 20px;
+}
+nav {
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+}
+li {
+    display: inline;
+}
+#top-menu {
+    z-index: 20;
+}
+article {
+    max-width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+}
+@media (max-width: 500px) {
+    h1 {
+    font-size: 36px;
+    }
+    li {
+    display: block;
+    padding: 5px;
+    }
+} */
