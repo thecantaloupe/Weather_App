@@ -1,0 +1,25 @@
+{
+  "name": "Weather_App",
+  "description": "Weather App",
+  "version": "0.1.0",
+  "homepage": "https://github.com/thecantaloupe/Weather_App",
+  "author": "Zachary Gomez (https://github.com/thecantaloupe/)",
+  "repository": "thecantaloupe/Weather_App",
+  "bugs": {
+    "url": "https://github.com/thecantaloupe/Weather_App/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "requirejs": "^2.3.6"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "Weather_App"
+  ]
+}

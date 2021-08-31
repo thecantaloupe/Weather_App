@@ -5,7 +5,10 @@ let main;
 let sys;
 let wind;
 
-const API_KEY = ''
+// require(['dotenv']).config();
+// const API_KEY = process.env.API_KEY
+
+const API_KEY = API_KEY
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather?'
 //Cached Elements References
 const $title = $('#title');
